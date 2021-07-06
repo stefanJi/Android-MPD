@@ -16,6 +16,11 @@ annotation class RemoteFeature(val name: String, val impl: String)
 - name: Module name
 - impl: Full reference of the implementation class of the interface exposed by the module
 
+
+## Demo project architecture
+
+![](./demo/graphviz.png)
+
 ## Step
 
 ### 1. Create a feature_center module
