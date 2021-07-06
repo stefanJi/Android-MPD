@@ -18,7 +18,7 @@ annotation class RemoteFeature(val name: String, val impl: String)
 
 ## Step
 
-### Create a feature_center module
+### 1. Create a feature_center module
 
 *feature_center/build.gradle*
 
@@ -31,7 +31,7 @@ dependencies {
 }
 ```
 
-### Declare the external interface of the module in feature_center and use the `RemoteFeature` annotation to decorate
+### 2. Declare the external interface of the module in feature_center and use the `RemoteFeature` annotation to decorate
 
 *site.jy.feature_center.AModuleFeature*:
 
@@ -42,7 +42,7 @@ interface AModuleFeature {
 }
 ```
 
-### Implement the interface inside the module
+### 3. Implement the interface inside the module
 
 *site.jiyang.module_a.AModuleFeatureImpl*:
 
@@ -56,7 +56,7 @@ class AModuleFeatureImpl : AModuleFeature {
 }
 ```
 
-### Build project
+### 4. Build project
 
 *mdp-processor* will generate a **RemoteFeatures** class, which will contain the implementation of all interfaces decorated with `RemoteFeature` annotation.
 
@@ -100,7 +100,7 @@ public object RemoteFeatures {
 }
 ```
 
-### Call a module exposed interface
+### 5. Call a module exposed interface
 
 Use `RemoteFeatures` to call the interfaces of other modules withou directly depended on other modules.
 
