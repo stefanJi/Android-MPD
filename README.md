@@ -19,7 +19,7 @@ annotation class RemoteFeature(val name: String, val impl: String)
 
 ## Demo project architecture
 
-![](./demo/graphviz.png)
+![](https://github.com/stefanJi/Android-MPD/blob/main/demo/graphviz.png?raw=true)
 
 ## Step
 
