@@ -31,8 +31,8 @@ annotation class RemoteFeature(val name: String, val impl: String)
 //...
 dependencies {
     //...
-    kapt(project(':mdp-processor'))
-    api(project(':mdp-processor'))
+    kapt(project(':mpd-processor'))
+    api(project(':mpd-processor'))
 }
 ```
 
