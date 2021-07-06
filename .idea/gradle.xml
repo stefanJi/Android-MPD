@@ -9,7 +9,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/demo/app" />
+            <option value="$PROJECT_DIR$/demo/feature_center" />
+            <option value="$PROJECT_DIR$/demo/module-a" />
+            <option value="$PROJECT_DIR$/demo/module-b" />
+            <option value="$PROJECT_DIR$/mdp-processor" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

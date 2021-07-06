@@ -1,2 +1,13 @@
 rootProject.name = "Android-MPD"
-include ':app'
+
+def include_project = { dir, name ->
+    include "$name"
+    project(":$name").projectDir = file("$dir/$name")
+}
+
+include_project("demo", "app")
+include_project("demo", "feature_center")
+include_project("demo", "module-a")
+include_project("demo", "module-b")
+
+include ':mdp-processor'

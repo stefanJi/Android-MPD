@@ -1,0 +1,12 @@
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "com.squareup:kotlinpoet:1.8.0"
+}
+
+Closure.metaClass.implementationIfExist = { projectName ->
+    if (findProject(projectName) != null) {
+        delegate.implementation delegate.project(path: "${projectName}")
+    }
+}
