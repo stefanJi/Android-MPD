@@ -1,12 +1,21 @@
 apply plugin: 'kotlin'
+apply plugin: 'maven-publish'
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "com.squareup:kotlinpoet:1.8.0"
 }
 
-Closure.metaClass.implementationIfExist = { projectName ->
-    if (findProject(projectName) != null) {
-        delegate.implementation delegate.project(path: "${projectName}")
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.java
+
+                groupId = 'site.jiyang'
+                artifactId = 'mpd-processor'
+                version = '1.0.0'
+            }
+        }
     }
 }
