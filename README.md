@@ -2,6 +2,25 @@
 
 A kotlin annotation processor util to solve the coupling problem of multiple projects.
 
+## Usage
+
+[![](https://jitpack.io/v/stefanJi/Android-MPD.svg)](https://jitpack.io/#stefanJi/Android-MPD)
+
+```
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+```
+dependencies {
+    implementation 'com.github.stefanJi:Android-MPD:Tag'
+}
+```
+
 ## RemoteFeature
 
 An annotator to decorate the interface exposed by a module.
